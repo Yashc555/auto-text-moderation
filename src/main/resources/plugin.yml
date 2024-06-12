@@ -1,0 +1,18 @@
+name: AutoTextModeration
+version: '${project.version}'
+main: me.bluetea.autoTextModeration.AutoTextModeration
+api-version: 1.20
+authors: [ bluetea_0 ]
+description: Filters chat and anvil using regex
+permissions:
+  AutoTextModeration.bypass:
+    description: Players with this plugin will not be punished.
+    default: false
+  AutoTextModeration.config:
+    description: Ability to change the config.
+commands:
+  configAutoTextMod:
+    description: Change all the different types of config.
+    permission: AutoTextModeration.config
+    permission-message: You do not have the permission to use this command.
+    usage: /<command> <config-type> <config-value>

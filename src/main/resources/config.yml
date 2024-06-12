@@ -1,0 +1,16 @@
+punishment-toggle: 'true' #Set this to false if you do not want players to be punished
+
+minor-threshold: 5 #Minor punishment will be imposed if a player uses words from the minor list more than the threshold
+
+minor-punishment-command: 'kick %player% Mind your words.'
+
+major-threshold: 3 #Major punishment will be imposed if a player uses words from the major list more than the threshold
+
+major-punishment-command: 'ban %player% Excessive usage of banned words.'
+
+minor-regex-list: #Add the REGEX for words which result in minor punishment using this converter - https://dkalaxdk.github.io/CMIRegexFilter/CMIRegex.html
+  - '\b(?i)(b(\W|\d|_|)+)+(i(\W|\d|_|)+)+(t(\W|\d|_|)+)+(c(\W|\d|_|)+)+(h(\W|\d|_|)+)+'
+
+major-regex-list: #Add the REGEX for words which result in major punishment using this converter - https://dkalaxdk.github.io/CMIRegexFilter/CMIRegex.html
+  - '\b(?i)(n(\W|\d|_|)+)+(i(\W|\d|_|)+)+(g(\W|\d|_|)+)+(a(\W|\d|_|)+)+'
+  - '\b(?i)(n(\W|\d|_|)+)+(i(\W|\d|_|)+)+(g(\W|\d|_|)+)+(g(\W|\d|_|)+)+(a(\W|\d|_|)+)+'
