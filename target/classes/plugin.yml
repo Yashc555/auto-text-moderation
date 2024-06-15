@@ -1,7 +1,7 @@
 name: AutoTextModeration
-version: '1.0'
+version: '1.1'
 main: me.bluetea.autoTextModeration.AutoTextModeration
-api-version: 1.20
+api-version: 1.14
 authors: [ bluetea_0 ]
 description: Filters chat and anvil using regex
 permissions:

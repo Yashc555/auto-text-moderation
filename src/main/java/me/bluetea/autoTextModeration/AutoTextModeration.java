@@ -2,7 +2,6 @@ package me.bluetea.autoTextModeration;
 
 import me.bluetea.autoTextModeration.commands.ConfigCommand;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.util.logging.Logger;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -34,9 +34,9 @@ public final class AutoTextModeration extends JavaPlugin implements Listener {
         plugin = this;
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(this, this);
-        System.out.println(ChatColor.AQUA + "----------------------------");
-        System.out.println(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Auto Text Moderation STARTED");
-        System.out.println(ChatColor.AQUA + "----------------------------");
+        getLogger().info("----------------------------");
+        getLogger().info("Auto Text Moderation STARTED");
+        getLogger().info("----------------------------");
         getCommand("configAutoTextMod").setExecutor(new ConfigCommand());
         getCommand("configAutoTextMod").setTabCompleter(new ConfigCommand());
     }
